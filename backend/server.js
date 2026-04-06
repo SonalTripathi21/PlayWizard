@@ -41,6 +41,10 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/playwizar
     console.warn(`⚠️ The application will continue to run, but game saving will not work. (Error: ${err.message})\n`);
   });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+module.exports = app;
