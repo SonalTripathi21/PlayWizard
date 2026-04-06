@@ -1,0 +1,11 @@
+[
+  {
+    "_id": "c5c0b264-4c70-48e9-9d99-1ab3684519c2",
+    "prompt": "File storage test game",
+    "config": {
+      "gameType": "platformer",
+      "mechanic": "avoid"
+    },
+    "createdAt": "2026-03-23T14:07:46.341Z"
+  }
+]
